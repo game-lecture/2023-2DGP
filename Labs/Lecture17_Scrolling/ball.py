@@ -23,9 +23,5 @@ class Ball:
         return self.x - 10, self.y - 10, self.x + 10, self.y + 10
 
     def handle_collision(self, group, other):
-        match group:
-            case 'boy:ball':
-                other.ball = self # 소년이 볼을 소유하도록.
-                pass
-            case 'zombie:ball':
-                other.ball = self
+	pass
+
