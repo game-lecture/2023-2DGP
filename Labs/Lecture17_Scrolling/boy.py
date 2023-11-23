@@ -7,6 +7,7 @@ from pico2d import get_time, load_image, load_font, clamp, SDL_KEYDOWN, SDL_KEYU
 from ball import Ball
 import game_world
 import game_framework
+import server
 
 
 # state event check
@@ -253,8 +254,6 @@ class StateMachine:
         self.boy.x += math.cos(self.boy.dir) * self.boy.speed * game_framework.frame_time
         self.boy.y += math.sin(self.boy.dir) * self.boy.speed * game_framework.frame_time
 
-        # fill here
-
     def handle_event(self, e):
         for check_event, next_state in self.transitions[self.cur_state].items():
             if check_event(e):
@@ -275,13 +274,13 @@ class Boy:
         self.font = load_font('ENCR10B.TTF', 24)
         self.state_machine = StateMachine(self)
         self.state_machine.start()
-
-    def set_background(self, bg):
         # fill here
-        pass
+
 
     def update(self):
         self.state_machine.update()
+        # fill here
+
 
     def handle_event(self, event):
         self.state_machine.handle_event(('INPUT', event))
@@ -293,6 +292,5 @@ class Boy:
     def get_bb(self):
         return self.x - 20, self.y - 50, self.x + 20, self.y + 50
 
-    # fill here
     def handle_collision(self, group, other):
         pass
