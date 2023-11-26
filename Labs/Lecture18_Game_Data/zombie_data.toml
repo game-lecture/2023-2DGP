@@ -1,0 +1,8 @@
+zombies = [
+  {name= "Nayeon", x=  3800, y=  2560, size = 1.0},
+  {name= "Momo"  , x=  4000, y=  2560, size = 1.1},
+  {name= "Sana"  , x=  4600, y=  2560, size = 1.3},
+  {name= "Mina"  , x=  4800, y=  2560, size = 0.9},
+  {name= "Zwi"   , x=  5000, y=  2560, size = 1.4}
+]
+
